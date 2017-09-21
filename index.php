@@ -8,5 +8,13 @@
 </head>
 <body>
     <h1>Hola mundo</h1>
+
+    <form action="">
+    nombre <input type="text"><br>
+    apellido <input type="text"><br>
+    eMail <input type="text"><br>
+    
+    </form>
+
 </body>
 </html>

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <?php
     require_once "controller/ProductoController.php";
+    $nomSP="CALL ListarItem()";
     $fun = new Funciones();
     
     ?>  
@@ -17,9 +18,9 @@
     </style>
     <!--  <h1>hola</h1> -->
     <table>
-  <tr><td>Nombre del articulo</td>
+  <tr><td>CARA E CONFLEEEIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</td>
   <?php   
-  $fun->Mostrar();
+  $fun->Mostrar("CALL ListarItem()");
   
   ?>
    </table>

@@ -1,16 +1,16 @@
 <?php
   
-//require_once "view/producto_view.php";
+require_once "view/producto_view.php";
 class Funciones 
 {   
-    public function Mostrar()
+    public function Mostrar($nomsp)
     {
         require_once "model/ProductoModel.php";
         $producto=new ProductoModel();
-        $lstProducto=$producto->getProductos("CALL ListarItem()");
+        $lstProducto=$producto->getProductos($nomsp);
         foreach ($lstProducto as $registro)
         {
-           $r= "<tr><td>" . $registro["descripcion"] ."</td></tr>";
+           echo "<tr><td>" . $registro["descripcion"] ."</td></tr>";
         }
     }
  

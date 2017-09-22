@@ -9,7 +9,6 @@
     <br>
     <?php
      require_once "view/producto_view.php";
-
      ?>
     
 

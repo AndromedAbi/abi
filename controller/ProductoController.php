@@ -6,4 +6,13 @@ $lstProducto=$producto->getProductos();
 require_once "view/producto_view.php";
 
 
+public function getListar(){
+
+
+    
+}
+
+
+
+
 ?>

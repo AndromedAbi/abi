@@ -2,51 +2,40 @@
 <html> 
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<title>WTF</title> 
-<style type="text/css"> 
-#cont{ position:absolute; left:30%; top:30%; margin-top:-175px; margin-left:-250px; cursor:pointer; width:500px; height:350px;} 
-#cont img{ position:relative} 
-</style> 
-<script type="text/javascript"> 
-function rotate(angle){ 
-    var rotation = Math.PI * angle / 180; 
-    var costheta = Math.cos(rotation); 
-    var sintheta = Math.sin(rotation);  
-    if(!window.ActiveXObject){ 
-        this.style.position='absolute'; 
-        this.style.webkitTransform ='rotate('+angle+'deg)'; 
-        this.style.khtmlTransform ='rotate('+angle+'deg)';   
-        this.style.MozTransform='rotate('+angle+'deg)';     
-        this.style.OTransform='rotate('+angle+'deg)'; 
-        this.style.transform='rotate('+angle+'deg)'; 
-    }else{ 
-        this.style.filter="progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand')"; 
-        this.filters.item(0).M11 = costheta; 
-        this.filters.item(0).M12 = -sintheta; 
-        this.filters.item(0).M21 = sintheta; 
-        this.filters.item(0).M22 = costheta;  
-        this.style.top= ((this.parentNode.offsetHeight/2)-(this.offsetHeight/2))+'px'; 
-        this.style.left=  ((this.parentNode.offsetWidth/2)-(this.offsetWidth/2))+'px'; 
-    } 
-} 
-var ns={} 
-onload=function(){ 
-    (function(){    
-    document.getElementById('im').onmousedown=function(){ 
-        var _this=this; 
-        ns.angulo=ns.angulo || 0; 
-        ns.timmer=setInterval(function(){rotate.call(_this,ns.angulo+=5)},30); 
-    } 
-    document.getElementById('im').onmouseup=function(){ 
-        clearInterval(ns.timmer); 
-    } 
-    })(); 
-} 
-</script> 
-
+<title>Item</title> 
+<h1>Item</h1>
 </head> 
+<body>
+<div>
+<form id="item" name="item" method="post" action="" enctype="multipart/form-data">
 
-<body bgcolor="white"> 
-<div id="cont"><img id="im" src="img/img5.jpg" width="800" height="800"  /></div> 
+<span>Codigo: </span><br/>
+<input name="codigo" type="text" class="Texto" id="codigo" maxlength="4" size="5" /><br/><br/>
+
+<span>Color:</span><br/>   
+<input name="color" type="text" class="" id="" maxlength="10"  title="" size="5" /><br/><br/>
+
+<span>descripcion:</span><br/>
+<input name="descrip" type="text" class="" id="" maxlength="30"  title="" size="30" /><br/><br/>
+
+<span>tipo:</span><br/>
+<select name="tipo" id="tipo">
+    <option value="I" selected="selected">Insumo</option>
+    <option value="P">Producto</option>
+</select><br/><br/>
+
+<span>Unidad de Medida:</span><br/>
+<select name="tipo" id="tipo">
+        <option value="N/A" selected="selected">N/A</option>
+        <option value="kg">kg</option>
+        <option value="gramo">gramo</option>
+        <option value="unidad">unidad</option>
+        <option value="metro">metro</option>
+        <option value="centimetro">centimetro</option>
+    </select><br/><br/>
+
+<input name="enviar" type="submit" class="boton" id="enviar" value="enviar" />
+ 
+</div> 
 </body> 
 </html>  

@@ -12,7 +12,7 @@ class ProductoModel
     }
     public function getProductos()
     {
-        $consultar=$this->db->query("SELECT * FROM productos");
+        $consultar=$this->db->query("CALL listar()");
         while ($row = $consultar->fetch(PDO::FETCH_ASSOC))
         {
             $this->table[]=$row;

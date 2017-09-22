@@ -1,18 +1,18 @@
 <?php
-require_once "model/producto_model.php";
-$producto=new ProductoModel();
-$lstProducto=$producto->getProductos();
-
-require_once "view/producto_view.php";
-
-
-public function getListar(){
-
-
-    
+  
+//require_once "view/producto_view.php";
+class Funciones 
+{   
+    public function Mostrar()
+    {
+        require_once "model/ProductoModel.php";
+        $producto=new ProductoModel();
+        $lstProducto=$producto->getProductos("CALL ListarItem()");
+        foreach ($lstProducto as $registro)
+        {
+           $r= "<tr><td>" . $registro["descripcion"] ."</td></tr>";
+        }
+    }
+ 
 }
-
-
-
-
 ?>

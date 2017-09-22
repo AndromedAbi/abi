@@ -10,14 +10,19 @@ class ProductoModel
         $this->db=Conexion::Conectar();
         $this->table=array();
     }
-    public function getProductos()
+    public function getProductos($sql)
     {
-        $consultar=$this->db->query("CALL listar()");
+        $consultar=$this->db->query($sql);
         while ($row = $consultar->fetch(PDO::FETCH_ASSOC))
         {
             $this->table[]=$row;
         }
         return $this->table;
+    }
+    public function EjecutarSP()
+    {
+
+
     }
 
 }

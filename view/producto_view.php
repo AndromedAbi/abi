@@ -2,6 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <?php
+    require_once "controller/ProductoController.php";
+    $fun = new Funciones();
+    
+    ?>  
     <title></title>
   </head>
   <body>
@@ -10,15 +15,13 @@
         border: 1px dotted #FF0000;
       }
     </style>
-      <h1>hola</h1>
+    <!--  <h1>hola</h1> -->
     <table>
   <tr><td>Nombre del articulo</td>
-   <?php
-      foreach ($lstProducto as $registro)
-      {
-          echo "<tr><td>" . $registro["nombre"] ."</td></tr>";
-      }
-    ?>
+  <?php   
+  $fun->Mostrar();
+  
+  ?>
    </table>
   </body>
 </html>

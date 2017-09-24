@@ -4,26 +4,14 @@
     <meta charset="utf-8">
     <?php
     require_once "controller/Controller.php";
-
     $fun = new Funciones();
     
     ?>  
     <title></title>
   </head>
-  <body>
-    <style >
-      td {
-        border: 1px dotted #FF0000;
-      }
-    </style>
-    <!--  <h1>hola</h1> -->
-    <table>
-  <tr><td>CARA E CONFLEEEIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</td>
+  <body> 
   <?php   
-
-  $fun->Mostrar("CALL listar_item()");
-  
-  ?>
-   </table>
+  $fun->Mostrar("CALL listar_item('0')");    
+  ?>   
   </body>
 </html>

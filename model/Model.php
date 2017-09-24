@@ -2,7 +2,7 @@
 class Model
 {
     private $db;
-    private $table;
+    private $table;   
 
     public function __construct()
     {
@@ -10,20 +10,20 @@ class Model
         $this->db=Conexion::Conectar();
         $this->table=array();
     }
-    public function getProductos($sql)
+    public function getListar($sql)
     {
-        $consultar=$this->db->query($sql);
-        while ($row = $consultar->fetch(PDO::FETCH_ASSOC))
+        $consultar=$this->db->query($sql);      
+        $i=0;  
+        while ($row = $consultar->fetch(PDO::FETCH_BOTH))//por index o nombre //
         {
-            $this->table[]=$row;
+            $this->table[$i]=$row;
+            $i++;
         }
         return $this->table;
     }
-    public function EjecutarSP()
-    {
-
-        echo "holiiiiis";
-    }
-
+    public function EjecutarSP($sql)
+    {        
+             
+    }   
 }
  ?>

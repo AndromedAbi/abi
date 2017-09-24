@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <?php
-    require_once "controller/ProductoController.php";
+    require_once "controller/Controller.php";
 
     $fun = new Funciones();
     
@@ -21,7 +21,7 @@
   <tr><td>CARA E CONFLEEEIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</td>
   <?php   
 
-  $fun->Mostrar("CALL ListarItem()");
+  $fun->Mostrar("CALL listar_item()");
   
   ?>
    </table>

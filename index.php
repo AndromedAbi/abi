@@ -8,7 +8,7 @@
     <h1>Welcome to Taps Diseños / Bienvenido a Taps Diseños</h1>
     <br>
     <?php
-     require_once "view/producto_view.php";
+     require_once "view/Item.php";
      ?>
     
 

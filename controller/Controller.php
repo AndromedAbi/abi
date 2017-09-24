@@ -1,12 +1,12 @@
 <?php
   
-require_once "view/producto_view.php";
+require_once "view/Item.php";
 class Funciones 
 {   
     public function Mostrar($nomsp)
     {
-        require_once "model/ProductoModel.php";
-        $producto=new ProductoModel();
+        require_once "model/Model.php";
+        $producto=new Model();
         $lstProducto=$producto->getProductos($nomsp);
         foreach ($lstProducto as $registro)
         {

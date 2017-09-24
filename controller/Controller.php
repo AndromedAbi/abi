@@ -34,6 +34,11 @@ class Funciones
             echo "</tr>";
         }
         echo '</table>';             
-    }   
+    } 
+    public function ComandoSP($nomsp)
+    {
+        $mod=new Model();
+        $sql=$mod->EjecutarSP($nomsp);
+    }  
 }
 ?>

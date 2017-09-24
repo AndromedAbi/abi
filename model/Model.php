@@ -21,9 +21,13 @@ class Model
         }
         return $this->table;
     }
+    //=====================================================================================
+    //=== Funtion para Insert,Update,Delete llamando SP 24/09/2017=========================
+    //=====================================================================================
     public function EjecutarSP($sql)
     {        
-             
+        $data=$this->db->prepare($sql);
+        $data->execute();        
     }   
 }
  ?>

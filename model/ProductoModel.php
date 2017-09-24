@@ -22,7 +22,7 @@ class ProductoModel
     public function EjecutarSP()
     {
 
-
+        echo "holiiiiis";
     }
 
 }

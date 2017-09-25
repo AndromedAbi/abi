@@ -35,7 +35,10 @@
     </select><br/><br/>
 
 <input name="enviar" type="submit" class="boton" id="enviar" value="enviar" />
- 
+
+
+<script type="text/javascript"> alert("Operacion Exitosa")</script>
+<script type="text/javascript">window.location.href="index2.php";</script>  
 </div> 
 </body> 
 </html>  

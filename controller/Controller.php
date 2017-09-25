@@ -13,7 +13,7 @@ class Funciones
         //===el numero de columnas o nombre =====================================
         //=======================================================================        
         $mod=new Model();
-        $lstProducto=$mod->getListar($nomsp);     
+        $lstProducto=$mod->getListar($nomsp);
         echo '<table width="50%" border="1" style="text-align:center;">';
         $columnas = count($lstProducto[0])/2;      
         $filas = count($lstProducto);
@@ -32,13 +32,21 @@ class Funciones
                echo "<td>".$lstProducto[$i][$j]."</td>";
             }
             echo "</tr>";
-        }
+        } 
         echo '</table>';             
     } 
     public function ComandoSP($nomsp)
     {
         $mod=new Model();
         $sql=$mod->EjecutarSP($nomsp);
-    }  
+      /*  $sql->bindParam(1, $nombre);
+        $sql->bindParam(2, $valor);
+        $nombre = array("codit","descripcion","tipo","color","udm"); print_r($nombre);
+        $valor= array(); 
+        $sql->execute();*/
+
+
+    }   
+
 }
 ?>

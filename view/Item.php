@@ -11,7 +11,7 @@
   </head>
   <body> 
   <?php   
- // $fun->Mostrar("CALL listar_item('0')");
+  $fun->Mostrar("CALL listar_item('0')");
   $fun->ComandoSP("CALL insertar_item('55','negro','almendra','P','U')"); 
   ?>   
   </body>

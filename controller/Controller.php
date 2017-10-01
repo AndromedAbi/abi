@@ -44,8 +44,6 @@ class Funciones
         $nombre = array("codit","descripcion","tipo","color","udm"); print_r($nombre);
         $valor= array(); 
         $sql->execute();
-
-
     }   
 
 }

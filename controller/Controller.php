@@ -37,13 +37,16 @@ class Funciones
     } 
     public function ComandoSP($nomsp)
     {
-        $mod=new Model();
+       /* $mod=new Model();
         $sql=$mod->EjecutarSP($nomsp);
         $sql->bindParam(1, $nombre);
         $sql->bindParam(2, $valor);
         $nombre = array("codit","descripcion","tipo","color","udm"); print_r($nombre);
         $valor= array(); 
-        $sql->execute();
+        $sql->execute();*/
+        $mod=new Model();
+        $sql=$mod->EjecutarSP($nomsp);
+
     }   
 
 }

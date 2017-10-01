@@ -5,7 +5,7 @@
     <title>Taps Dieños</title>
   </head>
   <body>
-    <h1>Welcomeasd to Taps Diseños / Bienvenido a Taps Diseños</h1>
+    <h1>estamos en el index</h1>
     <br>
     <?php
      require_once "view/Item.php";

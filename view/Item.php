@@ -12,7 +12,11 @@
   <body> 
   <?php   
   $fun->Mostrar("CALL listar_item('0')");
-  $fun->ComandoSP("CALL insertar_item('55','negro','almendra','P','U')"); 
+ 
+
+  $data = array("");
+  //$fun->ComandoSP("CALL insertar_item('55','negro','almendra','P','U')"); 
+  $fun->ComandoSP("CALL saludo(@p); SELECT @p"); 
 //  $datos = array("codit" => "44","color" => "verde","descripcion" => "holamundo","tipo" => "P","udm" => "U");
  // $fun->ComandoSP($datos);
 

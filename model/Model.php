@@ -26,8 +26,9 @@ class Model
     //=====================================================================================
     public function EjecutarSP($sql)
     {        
-        $data=$this->db->prepare($sql);
-        $data->execute();   
-    }   
+        $data=$this->db->prepare($sql);     
+        $data->execute(); 
+          
+    }
 }
  ?>
